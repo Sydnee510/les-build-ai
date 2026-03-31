@@ -121,7 +121,86 @@ GitHub is like Google Drive for code. It stores your project online so you can a
 
 <br />
 
-### 5. Create an OpenAI Account (Powers Your AI)
+### 5. Connect Git to GitHub (So Your Computer Can Talk to GitHub)
+
+Right now Git is installed on your computer and you have a GitHub account online — but they don't know about each other yet. We need to connect them. Think of it like linking your phone to your email account.
+
+#### Tell Git Who You Are
+
+Open your terminal and type these two commands (replace with YOUR name and email):
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+> Use the **same email** you signed up for GitHub with.
+
+#### Set Up an SSH Key (Your Secure Connection)
+
+An SSH key is like a digital handshake between your computer and GitHub. Instead of typing your password every time, your computer proves who you are automatically.
+
+**Step 1: Check if you already have an SSH key**
+
+```bash
+ls ~/.ssh/id_ed25519.pub
+```
+
+- If you see a file path — you already have one! Skip to **Step 3**.
+- If you see "No such file or directory" — keep going to Step 2.
+
+> **Windows users:** If `ls` doesn't work, try `dir %USERPROFILE%\.ssh\id_ed25519.pub` instead.
+
+**Step 2: Create a new SSH key**
+
+```bash
+ssh-keygen -t ed25519 -C "your-email@example.com"
+```
+
+- It will ask where to save the key — **just press Enter** to use the default location
+- It will ask for a passphrase — **press Enter twice** to skip (or set one if you want extra security)
+
+**Step 3: Copy your SSH key**
+
+- **Mac:**
+  ```bash
+  pbcopy < ~/.ssh/id_ed25519.pub
+  ```
+  (This copies the key to your clipboard — you won't see anything happen, but it worked!)
+
+- **Windows:**
+  ```bash
+  clip < %USERPROFILE%\.ssh\id_ed25519.pub
+  ```
+  (Same thing — copied to your clipboard!)
+
+- **If those commands don't work**, you can also do it manually:
+  ```bash
+  cat ~/.ssh/id_ed25519.pub
+  ```
+  Then select all the text that appears and copy it (`Ctrl+C` or `Cmd+C`).
+
+**Step 4: Add the key to GitHub**
+
+1. Go to https://github.com/settings/keys
+2. Click **"New SSH key"**
+3. Give it a title (like "My Laptop")
+4. Paste the key you just copied into the **"Key"** box
+5. Click **"Add SSH key"**
+
+**Step 5: Test your connection**
+
+```bash
+ssh -T git@github.com
+```
+
+- If it asks "Are you sure you want to continue connecting?" — type **yes** and press Enter
+- If you see **"Hi username! You've successfully authenticated"** — you're connected!
+- If you see an error, double-check that you copied the full key and added it to GitHub
+
+<br />
+
+### 6. Create an OpenAI Account (Powers Your AI)
 
 OpenAI is the company that makes the AI your chatbot will use. You need an API key (like a password) that lets your app talk to their AI.
 
@@ -137,7 +216,7 @@ OpenAI is the company that makes the AI your chatbot will use. You need an API k
 
 <br />
 
-### 6. Sign Up for Claude (Your AI Coding Assistant)
+### 7. Sign Up for Claude (Your AI Coding Assistant)
 
 Claude is an AI made by Anthropic. While OpenAI powers the chatbot your users will talk to, Claude is the AI that helps **you** build and write code. Think of it as your personal coding tutor sitting right inside VS Code.
 
@@ -148,7 +227,7 @@ Claude is an AI made by Anthropic. While OpenAI powers the chatbot your users wi
 
 <br />
 
-### 7. Install the Claude Extension in VS Code
+### 8. Install the Claude Extension in VS Code
 
 This puts Claude right inside your code editor so you can ask it questions while you work.
 
@@ -164,7 +243,7 @@ Now you can highlight any code, right-click, and ask Claude to explain it, fix i
 
 <br />
 
-### 8. Install Claude Code in Your Terminal (Optional but Powerful)
+### 9. Install Claude Code in Your Terminal (Optional but Powerful)
 
 Claude Code is the command-line version of Claude. It can read your entire project, write code, run commands, and help you build features — all from your terminal.
 
@@ -224,13 +303,31 @@ The terminal is where you type commands to tell your computer what to do. It loo
 
 <br />
 
-### Step 2: Clone the Project
+### Step 2: Fork the Project (Make Your Own Copy)
 
-"Cloning" means downloading a copy of the project to your computer. Type this:
+"Forking" means creating your own personal copy of the project on GitHub. This way you can make all the changes you want without affecting the original.
+
+1. Go to the project's GitHub page: **<repo-url-here>**
+2. Click the **"Fork"** button in the top-right corner
+3. GitHub will create a copy under your account — something like `github.com/YOUR-USERNAME/les-build-ai`
+
+> **What's the difference between forking and cloning?**
+> - **Fork** = makes a copy on GitHub (online) under YOUR account
+> - **Clone** = downloads that copy to your computer (local)
+>
+> You fork first so you own the copy, then clone it to work on it locally.
+
+<br />
+
+### Step 3: Clone YOUR Fork to Your Computer
+
+Now let's download your forked copy to your computer. In your terminal, type:
 
 ```bash
-git clone <your-repo-url>
+git clone git@github.com:YOUR-USERNAME/les-build-ai.git
 ```
+
+> **Replace `YOUR-USERNAME` with your actual GitHub username!** You can also copy the exact URL from your fork's page — click the green **"Code"** button, select **"SSH"**, and copy the URL.
 
 Then move into the project folder:
 
@@ -242,7 +339,7 @@ cd les-build-ai
 
 <br />
 
-### Step 3: Install Dependencies
+### Step 4: Install Dependencies
 
 Dependencies are small helper tools that the project needs to work. Think of them like ingredients in a recipe.
 
@@ -257,7 +354,7 @@ You'll see a progress bar and some text — that's normal. Wait until it finishe
 
 <br />
 
-### Step 4: Set Up Your API Key
+### Step 5: Set Up Your API Key
 
 Copy the example file to create your own secret config file:
 
@@ -282,7 +379,7 @@ Save the file.
 
 <br />
 
-### Step 5: Start the Server
+### Step 6: Start the Server
 
 This is the moment of truth! Type:
 
@@ -301,7 +398,7 @@ Server running at http://localhost:3000
 
 <br />
 
-### Step 6: Open Your App!
+### Step 7: Open Your App!
 
 Open your web browser (Chrome, Safari, Firefox — any one works) and go to:
 
@@ -312,6 +409,81 @@ You should see your website! Click the chat icon in the bottom-right corner and 
 <br />
 
 **You just built an AI-powered website. That's incredible.**
+
+<br />
+
+---
+
+<br />
+
+## Saving Your Work (Git Add, Commit, Push)
+
+As you make changes to your project, you'll want to save your progress to GitHub. Think of it like hitting "Save" on a Google Doc — except with Git, you save in 3 small steps.
+
+<br />
+
+### The 3-Step Save: Add, Commit, Push
+
+Every time you finish making changes and want to save them, run these 3 commands from the **root of your project folder** (the `les-build-ai` folder, not `backend`):
+
+```bash
+git add .
+git commit -m "describe what you changed"
+git push
+```
+
+Here's what each command does:
+
+| Command | What It Does | Analogy |
+|---|---|---|
+| `git add .` | Selects all your changed files to be saved | Putting items in your shopping cart |
+| `git commit -m "message"` | Packages those changes with a description | Checking out and getting a receipt |
+| `git push` | Uploads everything to GitHub | Shipping the package to the cloud |
+
+<br />
+
+### When Should I Push?
+
+Push your code whenever you've made a change that works and you want to keep. Good times to push:
+
+- After you get the app running for the first time
+- After you change the colors and like how they look
+- After you update the system prompt and test it
+- After you add a new RAG document
+- Before you close your laptop for the day
+- Before you try something risky (so you can go back if it breaks!)
+
+> **Rule of thumb:** If you'd be sad to lose what you just did, push it!
+
+<br />
+
+### Writing Good Commit Messages
+
+The text inside the quotes after `-m` is your **commit message** — a short note about what you changed. Keep it simple:
+
+```bash
+# Good commit messages:
+git commit -m "changed accent color to blue"
+git commit -m "updated system prompt to be a fitness coach"
+git commit -m "added restaurant menu document for RAG"
+git commit -m "customized hero section with my brand name"
+
+# Not-so-great commit messages:
+git commit -m "stuff"
+git commit -m "changes"
+git commit -m "asdfgh"
+```
+
+<br />
+
+### Help! Something Went Wrong with Git
+
+| Problem | Solution |
+|---|---|
+| "Permission denied (publickey)" | Your SSH key isn't set up. Go back to **Step 5: Connect Git to GitHub** |
+| "fatal: not a git repository" | You're in the wrong folder. Run `cd les-build-ai` to get back to the project root |
+| "nothing to commit, working tree clean" | You haven't made any changes since your last commit — this is fine! |
+| "failed to push" | Someone else changed the repo. Run `git pull` first, then try `git push` again |
 
 <br />
 
@@ -422,9 +594,9 @@ Render can deploy your full app — website AND chatbot — with zero code chang
 
 #### How to Deploy:
 
-**1. Push your code to GitHub**
+**1. Push your latest code to GitHub**
 
-If you haven't already, create a repository on GitHub and push your project:
+Make sure all your changes are saved and pushed to your fork:
 
 ```bash
 cd les-build-ai
@@ -432,6 +604,8 @@ git add .
 git commit -m "ready to deploy"
 git push
 ```
+
+> If you followed the earlier steps, your fork is already connected. This just makes sure your latest changes are on GitHub.
 
 **2. Create a new Web Service on Render**
 
