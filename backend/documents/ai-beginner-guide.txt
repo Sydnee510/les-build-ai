@@ -1,0 +1,87 @@
+========================================
+GETTING STARTED WITH AI — A Beginner's Guide
+========================================
+For people who are brand new to AI and have no coding background.
+
+WHAT IS AI?
+-----------
+AI (Artificial Intelligence) is software that can understand language, answer questions, generate text,
+and complete tasks that normally require human thinking. Think of it like a really smart assistant that
+you can talk to by typing.
+
+You do NOT need to be a programmer to use AI or even build with it. Many tools today let you build
+AI-powered apps with minimal or no coding experience.
+
+
+WHAT IS A CHATBOT?
+------------------
+A chatbot is an AI you can have a conversation with. You type a message, the AI reads it, thinks about
+it, and types back a response. Examples you may have used: ChatGPT, Claude, Siri, or Alexa.
+
+The chatbot you're building today works the same way — you type a question on your website, it gets
+sent to an AI model (OpenAI's GPT), and the AI's response appears on screen.
+
+
+WHAT IS AN API?
+---------------
+An API (Application Programming Interface) is how two pieces of software talk to each other. In our
+case, your app sends the user's message to OpenAI's API, and OpenAI sends back the AI's response.
+
+Think of it like ordering at a restaurant:
+  - You (the app) tell the waiter (the API) what you want
+  - The waiter takes your order to the kitchen (OpenAI's servers)
+  - The kitchen prepares your food (generates a response)
+  - The waiter brings it back to you (returns the response)
+
+You need an API key to use OpenAI's API — it's like your membership card that lets you place orders.
+
+
+WHAT IS A PROMPT?
+-----------------
+A prompt is the instruction you give to the AI. There are two types in our app:
+
+1. System Prompt — Behind-the-scenes instructions that tell the AI HOW to behave. The user never
+   sees this. Example: "You are a friendly fitness coach who motivates people."
+
+2. User Prompt — The actual message the user types in the chat box.
+
+The better your system prompt, the better your AI will perform. Be specific! Tell it:
+  - Who it is (name, role)
+  - How to talk (casual, professional, funny)
+  - What topics to focus on
+  - What to avoid
+
+
+WHAT IS A MODEL?
+----------------
+An AI model is the brain behind the chatbot. Different models have different capabilities:
+
+  - gpt-4.1-mini  → Fast and affordable. Great for simple chatbots and quick answers.
+  - gpt-5.4-mini  → Smarter and newer. Better at understanding complex questions.
+  - gpt-5.4       → The most powerful. Best for detailed, nuanced conversations.
+
+You can switch models in the chat.service.js file. Start with gpt-4.1-mini and upgrade later!
+
+
+WHAT IS RAG?
+------------
+RAG (Retrieval-Augmented Generation) is a way to give your AI specific knowledge. Without RAG, the
+AI only knows what it was trained on (general knowledge up to its training date).
+
+With RAG, you can give the AI documents — like an FAQ, a menu, a product catalog, or company info —
+and it will use that information to answer questions accurately.
+
+In this app, we store documents in the /backend/documents/ folder. The AI reads them and uses them
+as context when answering questions.
+
+
+FIRST STEPS TO START BUILDING
+------------------------------
+1. Don't be afraid to experiment — you can't break anything permanently
+2. Start by changing the system prompt to give your AI a personality
+3. Try asking your chatbot different questions and see how it responds
+4. Edit the documents in the /backend/documents/ folder to teach your AI new things
+5. Change the colors and text on your website to make it yours
+6. Google anything you don't understand — every developer does this constantly!
+
+Remember: Every expert was once a beginner. You're already building with AI — that's amazing!

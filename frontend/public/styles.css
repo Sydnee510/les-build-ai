@@ -1,20 +1,48 @@
-/* CHALLENGE: Change these colors to make the app your own! */
+/*
+ * ============================================================
+ * STYLES.CSS — Your App's Design System
+ * ============================================================
+ *
+ * This file controls the entire look and feel of your app.
+ * All colors are defined as CSS variables below so you only
+ * need to change them in ONE place.
+ *
+ * CHALLENGE: Pick a color palette that matches your brand!
+ *   Try these resources for inspiration:
+ *   - https://coolors.co
+ *   - https://colorhunt.co
+ *   - https://www.happyhues.co
+ * ============================================================
+ */
+
 :root {
+  /* CHALLENGE: Primary accent — buttons, links, chat header, user messages */
   --color-accent: #D45E6A;
+  /* CHALLENGE: Darker shade of accent — used for hover states */
   --color-accent-hover: #C04E5A;
+  /* CHALLENGE: Light tint of accent — subtle backgrounds */
   --color-accent-light: rgba(212, 94, 106, 0.1);
+  /* CHALLENGE: Page background — the main canvas color */
   --color-bg-page: #F5F0EB;
+  /* CHALLENGE: Nav & footer background — dark contrast areas */
   --color-bg-nav: #1A1A1A;
   --color-bg-dark: #1A1A1A;
+  /* CHALLENGE: Card and section backgrounds */
   --color-bg-white: #ffffff;
   --color-bg-card: #ffffff;
+  /* CHALLENGE: Chat widget background */
   --color-bg-chat: #ffffff;
+  /* CHALLENGE: AI message bubble color */
   --color-bg-message-ai: #F5F0EB;
+  /* CHALLENGE: Text colors — dark for light backgrounds, light for dark backgrounds */
   --color-text-dark: #1A1A1A;
   --color-text-light: #ffffff;
   --color-text-muted: #6B7280;
+  /* CHALLENGE: Border color for inputs and dividers */
   --color-border: #E5E0DB;
+  /* CHALLENGE: CTA button highlight color */
   --color-yellow: #E8C547;
+  /* CHALLENGE: Disabled button color */
   --color-disabled: #D1D5DB;
 }
 
@@ -25,6 +53,7 @@
 }
 
 body {
+  /* CHALLENGE: Change the font family to match your brand! Try "Inter", "Poppins", "Raleway" etc. */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-bg-page);
   color: var(--color-text-dark);
@@ -38,18 +67,22 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* CHALLENGE: Adjust nav padding for spacing */
   padding: 16px 48px;
 }
 
 .nav-logo {
+  /* CHALLENGE: Change the logo font size and weight */
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-text-light);
+  /* CHALLENGE: Adjust letter-spacing for a different feel (try 2px, 3px, etc.) */
   letter-spacing: 1px;
 }
 
 .nav-links {
   display: flex;
+  /* CHALLENGE: Change the gap between nav links */
   gap: 32px;
   list-style: none;
 }
@@ -71,6 +104,7 @@ nav {
   color: var(--color-text-dark);
   padding: 10px 24px;
   border: none;
+  /* CHALLENGE: Change border-radius — try 8px for sharp, 24px for pill-shaped */
   border-radius: 24px;
   font-size: 0.95rem;
   font-weight: 600;
@@ -89,6 +123,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* CHALLENGE: Adjust hero section padding (top/bottom and left/right) */
   padding: 80px 48px;
   max-width: 1200px;
   margin: 0 auto;
@@ -96,10 +131,12 @@ nav {
 }
 
 .hero-content {
+  /* CHALLENGE: Change max-width to control how wide the text block is */
   max-width: 560px;
 }
 
 .hero-content h1 {
+  /* CHALLENGE: Change the hero headline size — go bigger for impact! */
   font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.1;
@@ -119,6 +156,7 @@ nav {
   background-color: var(--color-accent);
   color: var(--color-text-light);
   padding: 14px 32px;
+  /* CHALLENGE: Change border-radius — try 8px for sharp corners, 28px for pill shape */
   border-radius: 28px;
   text-decoration: none;
   font-size: 1rem;
@@ -131,14 +169,17 @@ nav {
 }
 
 .hero-image {
+  /* CHALLENGE: Change the hero image size */
   width: 400px;
   height: 400px;
   background-color: var(--color-bg-white);
+  /* CHALLENGE: Change border-radius — try 50% for a circle! */
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  /* CHALLENGE: Change the emoji/icon size inside the hero image */
   font-size: 4rem;
 }
 
@@ -152,6 +193,7 @@ nav {
 
 .features h2 {
   text-align: center;
+  /* CHALLENGE: Change the section heading size */
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 48px;
@@ -159,7 +201,9 @@ nav {
 
 .features-grid {
   display: grid;
+  /* CHALLENGE: Change to repeat(2, 1fr) for 2 columns, or repeat(4, 1fr) for 4 */
   grid-template-columns: repeat(3, 1fr);
+  /* CHALLENGE: Change the gap between feature cards */
   gap: 32px;
   max-width: 1100px;
   margin: 0 auto;
@@ -169,6 +213,7 @@ nav {
   background-color: var(--color-bg-page);
   padding: 32px;
   border-radius: 16px;
+  /* CHALLENGE: Change border-top thickness or remove it entirely */
   border-top: 4px solid var(--color-accent);
 }
 
@@ -191,6 +236,7 @@ nav {
 }
 
 .cta-section h2 {
+  /* CHALLENGE: Change the CTA headline size for impact */
   font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 16px;
@@ -276,8 +322,10 @@ footer {
 /* Floating toggle button */
 #chat-toggle {
   position: fixed;
+  /* CHALLENGE: Move the button — change bottom/right values */
   bottom: 24px;
   right: 24px;
+  /* CHALLENGE: Change the button size */
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -285,6 +333,7 @@ footer {
   color: var(--color-text-light);
   border: none;
   cursor: pointer;
+  /* CHALLENGE: Change the chat icon size */
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -304,9 +353,11 @@ footer {
   position: fixed;
   bottom: 100px;
   right: 24px;
+  /* CHALLENGE: Change the chat window size — try 420px wide, 600px tall for bigger */
   width: 380px;
   height: 520px;
   background-color: var(--color-bg-chat);
+  /* CHALLENGE: Change border-radius for sharper or rounder corners */
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   display: none;
@@ -330,6 +381,7 @@ footer {
 }
 
 .chat-avatar {
+  /* CHALLENGE: Change the avatar size */
   width: 36px;
   height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -362,11 +414,14 @@ footer {
 }
 
 .message {
+  /* CHALLENGE: Change max-width — 80% is default, try 90% for wider bubbles */
   max-width: 80%;
   padding: 10px 14px;
+  /* CHALLENGE: Change border-radius for message bubble shape */
   border-radius: 14px;
   line-height: 1.5;
   word-wrap: break-word;
+  /* CHALLENGE: Change message font size */
   font-size: 0.9rem;
 }
 
@@ -417,6 +472,7 @@ footer {
   flex: 1;
   padding: 10px 14px;
   border: 1px solid var(--color-border);
+  /* CHALLENGE: Change input border-radius — 8px for sharp, 24px for pill */
   border-radius: 24px;
   background-color: var(--color-bg-chat);
   color: var(--color-text-dark);
@@ -429,6 +485,7 @@ footer {
 }
 
 #send-button {
+  /* CHALLENGE: Change the send button size */
   width: 40px;
   height: 40px;
   background-color: var(--color-accent);

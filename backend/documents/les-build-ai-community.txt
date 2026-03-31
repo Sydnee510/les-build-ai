@@ -1,0 +1,63 @@
+========================================
+LET'S BUILD AI — Community & Company Info
+========================================
+
+ABOUT US
+--------
+Let's Build AI is a community and workshop series dedicated to empowering women
+and underrepresented groups to build with artificial intelligence. We believe that
+the people shaping AI should reflect the diversity of the world it serves.
+
+
+OUR MISSION
+-----------
+To make AI accessible to everyone — regardless of technical background. We provide
+hands-on workshops, mentorship, and a supportive community where beginners can go
+from zero to building real AI-powered applications in a single session.
+
+
+WHAT WE OFFER
+-------------
+• Live Workshops — Hands-on, guided sessions where you build a real AI app from scratch. No prior experience needed.
+• Community Support — A welcoming Discord community where you can ask questions, share progress, and connect with other builders.
+• Resource Library — Tutorials, templates, and guides to keep learning after the workshop ends.
+• Mentorship — Connect with experienced builders who can help you take your AI project to the next level.
+• Startup Support — For those ready to build a real product, we offer guidance on going from prototype to launch.
+
+
+OUR VALUES
+----------
+• Inclusion — AI should be built by everyone, for everyone.
+• Accessibility — No gatekeeping. If you can type, you can build.
+• Community — We grow faster together than alone.
+• Action — We don't just talk about AI. We build with it.
+• Empowerment — Leave every workshop more capable than when you arrived.
+
+
+THE AMIELLEVIA APP
+------------------
+Amiellevia is an AI-powered application created by the founder of Let's Build AI.
+It showcases what's possible when you combine creativity with AI technology. The app
+demonstrates how the same skills taught in our workshops can be used to build real,
+production-grade products that serve real users.
+
+Amiellevia is proof that you don't need a massive team or years of experience to
+build something meaningful with AI. It started as a workshop project and grew into
+a full application — and your project can follow the same path.
+
+
+HOW TO GET INVOLVED
+-------------------
+• Attend a workshop — Check our schedule for upcoming events
+• Join the community — Connect with us on Discord
+• Follow us on social media — Stay updated on events and resources
+• Spread the word — Tell a friend who might benefit from learning AI
+• Become a mentor — Share your skills and help others grow
+
+
+CONTACT US
+----------
+Email: hello@letsbuildai.com
+Website: www.letsbuildai.com
+Discord: discord.gg/letsbuildai
+Twitter: @letsbuildai

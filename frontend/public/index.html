@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- CHALLENGE: Change the title to your own app name! -->
+  <!-- CHALLENGE: Change the browser tab title to your own app name! -->
   <title>Let's Build AI</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -11,39 +11,63 @@
 
   <!-- ========================
        NAVIGATION
+       ========================
+       CHALLENGE: This is your site's top navigation bar.
+       - Change the logo/brand name
+       - Add or remove nav links
+       - Change the CTA button text ("Get Started")
        ======================== -->
   <nav>
-    <!-- CHALLENGE: Change this to your brand name! -->
+    <!-- CHALLENGE: Change this to your brand name or add an <img> tag for a logo! -->
     <div class="nav-logo">LET'S BUILD AI</div>
     <ul class="nav-links">
+      <!-- CHALLENGE: Add, remove, or rename these navigation links -->
       <li><a href="#features">Features</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- CHALLENGE: Change this button text — "Sign Up", "Book a Demo", "Try Free", etc. -->
     <button class="nav-cta">Get Started</button>
   </nav>
 
   <!-- ========================
        HERO SECTION
+       ========================
+       CHALLENGE: This is the first thing visitors see.
+       - Write a catchy headline
+       - Update the description to explain YOUR app
+       - Change the CTA button text and link
+       - Replace the emoji with an image: <img src="your-image.jpg" alt="..." />
        ======================== -->
   <section class="hero">
     <div class="hero-content">
-      <!-- CHALLENGE: Change this headline and description! -->
+      <!-- CHALLENGE: Write your own headline — make it bold and memorable! -->
       <h1>Build smarter. Connect faster.</h1>
+      <!-- CHALLENGE: Describe what YOUR app does in 1-2 sentences -->
       <p>Meet your AI-powered assistant that helps you get answers instantly. Try it out by clicking the chat icon in the bottom right corner.</p>
+      <!-- CHALLENGE: Change the button text and link -->
       <a href="#" class="hero-cta">Learn More</a>
     </div>
     <div class="hero-image">
+      <!-- CHALLENGE: Replace this emoji with your own image!
+           Example: <img src="my-hero-image.png" alt="My App" style="width:100%;border-radius:24px;" /> -->
       <span>&#x2728;</span>
     </div>
   </section>
 
   <!-- ========================
        FEATURES SECTION
+       ========================
+       CHALLENGE: Highlight what makes your app special.
+       - Change the section title
+       - Update each card's heading and description
+       - Add more cards by copying a <div class="feature-card"> block
        ======================== -->
   <section class="features" id="features">
+    <!-- CHALLENGE: Change this section heading -->
     <h2>Why you'll love it</h2>
     <div class="features-grid">
+      <!-- CHALLENGE: Update each feature card's title and description -->
       <div class="feature-card">
         <h3>Instant Answers</h3>
         <p>Ask anything and get helpful responses powered by AI in seconds, not hours.</p>
@@ -56,35 +80,53 @@
         <h3>Easy to Customize</h3>
         <p>Change the personality, colors, and style to make it uniquely yours.</p>
       </div>
+      <!-- CHALLENGE: Add another feature card! Just copy-paste one of the blocks above -->
     </div>
   </section>
 
   <!-- ========================
        CTA SECTION
+       ========================
+       CHALLENGE: This is your call-to-action — convince visitors to take action.
+       - Change the headline
+       - Update the description
+       - Change the button text and link
        ======================== -->
   <section class="cta-section" id="about">
+    <!-- CHALLENGE: Write a compelling CTA headline -->
     <h2>Stop guessing. Start building.</h2>
+    <!-- CHALLENGE: Change this description -->
     <p>Join the workshop and build your own AI-powered website from scratch.</p>
+    <!-- CHALLENGE: Change button text — "Sign Up Now", "Join Us", "Start Free", etc. -->
     <a href="#" class="cta-button">Get Started</a>
   </section>
 
   <!-- ========================
        FOOTER
+       ========================
+       CHALLENGE: Update with your real info.
+       - Change the brand name
+       - Update copyright year
+       - Add your real links (GitHub, social media, docs)
        ======================== -->
   <footer id="contact">
     <div class="footer-content">
       <div class="footer-brand">
+        <!-- CHALLENGE: Change to your brand name -->
         LET'S BUILD AI
+        <!-- CHALLENGE: Update the copyright text -->
         <p>&copy; 2026 Let's Build AI Workshop</p>
       </div>
       <div class="footer-links">
         <h4>Resources</h4>
+        <!-- CHALLENGE: Add your real links here -->
         <a href="#">Documentation</a>
         <a href="#">GitHub</a>
         <a href="#">Support</a>
       </div>
       <div class="footer-links">
         <h4>Connect</h4>
+        <!-- CHALLENGE: Add your social media links -->
         <a href="#">Twitter</a>
         <a href="#">LinkedIn</a>
         <a href="#">Discord</a>
@@ -94,33 +136,50 @@
 
   <!-- ========================
        CHATBOT WIDGET
+       ========================
+       This is the floating chat widget in the bottom-right corner.
+       It opens a chat modal when clicked.
+
+       CHALLENGE: Customize everything about the chat experience:
+       - Change the toggle button icon
+       - Change the AI's name and avatar
+       - Change the welcome message
+       - Change the input placeholder
+       - Change the "Thinking..." text
+       - Change the error messages
        ======================== -->
 
   <!-- Floating chat toggle button -->
+  <!-- CHALLENGE: Change the icon — try other emojis or use an SVG icon -->
   <button id="chat-toggle" aria-label="Open chat">&#x1F4AC;</button>
 
   <!-- Chat modal -->
   <div id="chat-widget">
     <div id="chat-header">
+      <!-- CHALLENGE: Change the avatar emoji — try a robot, sparkle, or your brand icon -->
       <div class="chat-avatar">&#x2728;</div>
       <div class="chat-header-info">
-        <!-- CHALLENGE: Change your AI assistant's name! -->
+        <!-- CHALLENGE: Give your AI assistant a name! Examples: "Tera", "Nova", "Sage", "Aria" -->
         <h3>AI Assistant</h3>
+        <!-- CHALLENGE: Change the status text — "Online", "Ready to help", "Ask me anything" -->
         <span>Online</span>
       </div>
     </div>
     <div id="chat-container">
-      <!-- CHALLENGE: Change this welcome message! -->
+      <!-- CHALLENGE: Write a welcome message that matches your AI's personality!
+           Example: "Hey! I'm Nova, your personal style assistant. Ask me anything about fashion!" -->
       <div class="welcome-message">Hey there! I'm your AI assistant. What questions do you have?</div>
     </div>
     <div id="input-area">
-      <!-- CHALLENGE: Change this placeholder text to something fun! -->
+      <!-- CHALLENGE: Change the placeholder text to guide users on what to ask
+           Examples: "Ask about our menu...", "What style are you looking for?", "How can I help?" -->
       <input
         type="text"
         id="message-input"
         placeholder="Ask a question..."
         autocomplete="off"
       />
+      <!-- CHALLENGE: Change the send button icon — try a paper plane, arrow, etc. -->
       <button id="send-button">&#x27A4;</button>
     </div>
   </div>
@@ -155,6 +214,7 @@
       const div = document.createElement("div");
       div.classList.add("thinking");
       div.id = "thinking-indicator";
+      // CHALLENGE: Change the thinking/loading text — "Typing...", "Working on it...", "One sec..."
       div.textContent = "Thinking...";
       chatContainer.appendChild(div);
       chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -188,10 +248,12 @@
         if (data.reply) {
           addMessage(data.reply, "ai");
         } else {
+          // CHALLENGE: Change this error message to match your AI's personality
           addMessage("Sorry, something went wrong.", "ai");
         }
       } catch (error) {
         removeThinking();
+        // CHALLENGE: Change this error message — "Hmm, I can't connect right now. Try again!"
         addMessage("Could not reach the server. Is it running?", "ai");
       }
 
