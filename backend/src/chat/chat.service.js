@@ -205,16 +205,17 @@ const conversationHistory = [];
  * ============================================================
  */
 async function getChatResponse(userMessage) {
-  // Find a relevant document for RAG context
-  const relevantDoc = findRelevantDocument(userMessage);
-
-  // Build the RAG context string (empty if no document matched)
-  // CHALLENGE: Change how the context is presented to the AI
-  const ragContext = relevantDoc
-    ? `\n\nUse the following document to help answer the user's question. ` +
-      `Only reference this information if it's relevant:\n\n` +
-      `--- ${relevantDoc.name} ---\n${relevantDoc.content}\n---`
-    : "";
+  // RAG DOCUMENT RETRIEVAL (commented out — chatbot uses system prompt only)
+  // CHALLENGE: Uncomment the lines below to enable RAG so your AI can
+  // answer questions using your documents in /backend/documents/
+  //
+  // const relevantDoc = findRelevantDocument(userMessage);
+  // const ragContext = relevantDoc
+  //   ? `\n\nUse the following document to help answer the user's question. ` +
+  //     `Only reference this information if it's relevant:\n\n` +
+  //     `--- ${relevantDoc.name} ---\n${relevantDoc.content}\n---`
+  //   : "";
+  const ragContext = "";
 
   /*
    * ============================================================
@@ -260,7 +261,7 @@ async function getChatResponse(userMessage) {
    */
   const systemPrompt =
     // CHALLENGE: Replace this entire string with your AI's personality!
-    "You are a friendly and helpful AI assistant. You give clear, concise answers." +
+    "You are a yoga instructor named Tasha. You provide guidance on yoga poses, breathing techniques, and mindfulness practices. You are calm, encouraging, and supportive. Keep your responses brief — use no more than 5 bullet points. Be concise and avoid long paragraphs." +
     ragContext;
 
   // Add the user's message to conversation history

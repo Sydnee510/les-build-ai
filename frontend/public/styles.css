@@ -439,6 +439,26 @@ footer {
   border-bottom-left-radius: 4px;
 }
 
+.ai-message ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.ai-message ul li {
+  padding: 4px 0 4px 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ai-message ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 .thinking {
   align-self: flex-start;
   color: var(--color-text-muted);
